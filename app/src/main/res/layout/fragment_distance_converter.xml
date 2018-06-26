@@ -1,0 +1,293 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="abanoubmagdi.home.thecompletecalculator.DistanceConverter">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="abanoubmagdi.home.thecompletecalculator.DistanceConverter">
+
+
+        <EditText
+            android:id="@+id/distanceEditText"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:gravity="center_vertical"
+            android:hint="1"
+            android:inputType="numberDecimal"
+            app:layout_constraintHeight_percent=".12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".5" />
+
+        <Spinner
+            android:id="@+id/distanceSpinner"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:entries="@array/distances_array"
+            app:layout_constraintHeight_percent=".12"
+            app:layout_constraintStart_toEndOf="@+id/distanceEditText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/decimeter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/centimeter"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/meter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/decimeter"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Meter"
+            app:layout_constraintStart_toEndOf="@+id/meter"
+            app:layout_constraintTop_toBottomOf="@+id/textView20"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Hectometer"
+            app:layout_constraintStart_toEndOf="@+id/hectometer"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Kilometer"
+            app:layout_constraintStart_toEndOf="@+id/kilometer"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Inch"
+            app:layout_constraintStart_toEndOf="@+id/inch"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Foot"
+            app:layout_constraintStart_toEndOf="@+id/foot"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/hectometer"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meter"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/kilometer"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hectometer"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Mile"
+            app:layout_constraintStart_toEndOf="@+id/mile"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Nautical_Mile"
+            app:layout_constraintStart_toEndOf="@+id/nautical_mile"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Yard"
+            app:layout_constraintStart_toEndOf="@+id/yard"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/inch"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kilometer"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/foot"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inch"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/yard"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/foot"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/mile"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/yard"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/nautical_mile"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mile"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/centimeter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/millimeter"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/millimeter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/distanceEditText"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Decimeter"
+            app:layout_constraintStart_toEndOf="@+id/decimeter"
+            app:layout_constraintTop_toBottomOf="@+id/textView21"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Centimeter"
+            app:layout_constraintStart_toEndOf="@+id/centimeter"
+            app:layout_constraintTop_toBottomOf="@+id/textView22"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/Millimeter"
+            app:layout_constraintStart_toEndOf="@+id/millimeter"
+            app:layout_constraintTop_toBottomOf="@+id/distanceSpinner"
+            app:layout_constraintWidth_percent=".5" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

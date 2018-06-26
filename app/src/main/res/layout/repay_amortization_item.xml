@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewRepayAmortizationNO"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".1" />
+
+    <TextView
+        android:id="@+id/textViewRepayAmortizationPayments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/textViewRepayAmortizationNO"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".225" />
+
+    <TextView
+        android:id="@+id/textViewRepayAmortizationPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/textViewRepayAmortizationPayments"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".225" />
+
+    <TextView
+        android:id="@+id/textViewRepayAmortizationInterest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/textViewRepayAmortizationPrincipal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".225" />
+
+    <TextView
+        android:id="@+id/textViewRepayAmortizationBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/textViewRepayAmortizationInterest"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".225" />
+</android.support.constraint.ConstraintLayout>
