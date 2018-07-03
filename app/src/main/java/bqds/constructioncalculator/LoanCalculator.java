@@ -1,4 +1,4 @@
-package abanoubmagdi.home.thecompletecalculator;
+package bqds.constructioncalculator;
 
 
 import android.content.Context;
@@ -37,7 +37,7 @@ public class LoanCalculator extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view=inflater.inflate(R.layout.fragment_loan_calculator, container, false);
+        view=inflater.inflate(abanoubmagdi.home.thecompletecalculator.R.layout.fragment_loan_calculator, container, false);
 
         new Thread(new Runnable() {
             @Override
@@ -48,18 +48,18 @@ public class LoanCalculator extends Fragment {
 
         SharedPreferences prefs=getActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt("lastFragment", R.id.nav_loan_calculator);
+        editor.putInt("lastFragment", abanoubmagdi.home.thecompletecalculator.R.id.nav_loan_calculator);
         editor.apply();
 
-        getActivity().setTitle(R.string.Loan_Calculator);
+        getActivity().setTitle(abanoubmagdi.home.thecompletecalculator.R.string.Loan_Calculator);
         return view;
     }
 
     private void setListeners(){
 
-        spinnerInterestPeriodTime=(Spinner) view.findViewById(R.id.spinnerInterestPeriodTime);
-        spinnerLoanPeriodTime=(Spinner) view.findViewById(R.id.spinnerLoanPeriodTime);
-        spinnerPayMethod=(Spinner) view.findViewById(R.id.spinnerPayMethod);
+        spinnerInterestPeriodTime=(Spinner) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.spinnerInterestPeriodTime);
+        spinnerLoanPeriodTime=(Spinner) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.spinnerLoanPeriodTime);
+        spinnerPayMethod=(Spinner) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.spinnerPayMethod);
 
         spinnerPayMethod.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -124,17 +124,17 @@ public class LoanCalculator extends Fragment {
 
             }
         });
-        editTextInterestOnlyPeriod=(EditText) view.findViewById(R.id.editInterestPeriod);
-        editTextInterestRate=(EditText) view.findViewById(R.id.editInterestRate);
-        editTextLoanPeriod=(EditText) view.findViewById(R.id.editLoanPeriod);
-        editTextLoanPrincipal=(EditText) view.findViewById(R.id.editLoanPrincipal);
+        editTextInterestOnlyPeriod=(EditText) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.editInterestPeriod);
+        editTextInterestRate=(EditText) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.editInterestRate);
+        editTextLoanPeriod=(EditText) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.editLoanPeriod);
+        editTextLoanPrincipal=(EditText) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.editLoanPrincipal);
 
-        textViewMonthlyInterest=(TextView) view.findViewById(R.id.textViewMonthlyInterest);
-        textViewMonthlyPay=(TextView) view.findViewById(R.id.textViewMonthlyPayment);
-        textViewTotalPay=(TextView) view.findViewById(R.id.textViewTotalPayment);
-        textViewTotalInterest=(TextView) view.findViewById(R.id.textViewTotalInterest);
+        textViewMonthlyInterest=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.textViewMonthlyInterest);
+        textViewMonthlyPay=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.textViewMonthlyPayment);
+        textViewTotalPay=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.textViewTotalPayment);
+        textViewTotalInterest=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.textViewTotalInterest);
 
-        listViewRepayAmortization=(ListView) view.findViewById(R.id.listViewRepayAmortization);
+        listViewRepayAmortization=(ListView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.listViewRepayAmortization);
 
         editTextInterestRate.addTextChangedListener(new TextWatcher() {
             @Override

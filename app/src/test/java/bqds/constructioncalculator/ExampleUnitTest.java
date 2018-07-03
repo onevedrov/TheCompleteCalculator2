@@ -1,4 +1,4 @@
-package abanoubmagdi.home.thecompletecalculator;
+package bqds.constructioncalculator;
 
 import org.junit.Test;
 

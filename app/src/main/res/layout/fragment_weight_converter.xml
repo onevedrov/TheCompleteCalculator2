@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="abanoubmagdi.home.thecompletecalculator.WeightConverter">
+    tools:context=".WeightConverter">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="abanoubmagdi.home.thecompletecalculator.WeightConverter">
+        tools:context=".WeightConverter">
 
         <EditText
             android:id="@+id/weightEditText"

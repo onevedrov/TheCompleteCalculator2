@@ -1,4 +1,4 @@
-package abanoubmagdi.home.thecompletecalculator;
+package bqds.constructioncalculator;
 
 
 import android.content.Context;
@@ -26,17 +26,17 @@ public class UnitConverter extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view=inflater.inflate(R.layout.fragment_unit_converter, container, false);
+        view=inflater.inflate(abanoubmagdi.home.thecompletecalculator.R.layout.fragment_unit_converter, container, false);
 
         SharedPreferences prefs=getActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt("lastFragment", R.id.nav_unit_converter);
+        editor.putInt("lastFragment", abanoubmagdi.home.thecompletecalculator.R.id.nav_unit_converter);
         editor.apply();
 
-        getActivity().setTitle(R.string.Unit_Converter);
-        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
+        getActivity().setTitle(abanoubmagdi.home.thecompletecalculator.R.string.Unit_Converter);
+        TabLayout tabLayout = (TabLayout) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.tabLayout);
 
-        ViewPager viewPager=(ViewPager) view.findViewById(R.id.unitConverterViewPager);
+        ViewPager viewPager=(ViewPager) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.unitConverterViewPager);
         UnitConverterPagerAdapter tabsFragmentAdapter=new UnitConverterPagerAdapter(getChildFragmentManager());
         viewPager.setAdapter(tabsFragmentAdapter);
         tabLayout.setupWithViewPager(viewPager);

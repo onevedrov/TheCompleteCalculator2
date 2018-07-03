@@ -1,4 +1,4 @@
-package abanoubmagdi.home.thecompletecalculator;
+package bqds.constructioncalculator;
 
 
 import android.content.Context;
@@ -33,7 +33,7 @@ public class TipCalculator extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view=inflater.inflate(R.layout.fragment_tip_calculator, container, false);
+        view=inflater.inflate(abanoubmagdi.home.thecompletecalculator.R.layout.fragment_tip_calculator, container, false);
 
         new Thread(new Runnable() {
             @Override
@@ -43,32 +43,32 @@ public class TipCalculator extends Fragment {
         }).start();
         SharedPreferences prefs=getActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt("lastFragment", R.id.nav_tip_calculator);
+        editor.putInt("lastFragment", abanoubmagdi.home.thecompletecalculator.R.id.nav_tip_calculator);
         editor.apply();
 
-        getActivity().setTitle(R.string.Tip_Calculator);
+        getActivity().setTitle(abanoubmagdi.home.thecompletecalculator.R.string.Tip_Calculator);
         return view;
     }
 
     private void setListeners(){
 
-        billAmount=(EditText) view.findViewById(R.id.billAmount);
-        tipPercent=(EditText) view.findViewById(R.id.tip);
-        taxAmount=(EditText) view.findViewById(R.id.taxAmount);
-        numPeople=(EditText) view.findViewById(R.id.numPeople);
+        billAmount=(EditText) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.billAmount);
+        tipPercent=(EditText) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.tip);
+        taxAmount=(EditText) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.taxAmount);
+        numPeople=(EditText) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.numPeople);
 
-        textViewTipBasis=(TextView) view.findViewById(R.id.tipBasis);
-        textViewTipAmount=(TextView) view.findViewById(R.id.tipAmount);
-        textViewTax=(TextView) view.findViewById(R.id.tax);
-        textViewTotalPay=(TextView) view.findViewById(R.id.totalPay);
-        textViewBillPerPerson=(TextView) view.findViewById(R.id.billPerPerson);
-        textViewTipPerPerson=(TextView) view.findViewById(R.id.tipPerPerson);
-        textViewTotalPerPerson=(TextView) view.findViewById(R.id.totalPerPerson);
+        textViewTipBasis=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.tipBasis);
+        textViewTipAmount=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.tipAmount);
+        textViewTax=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.tax);
+        textViewTotalPay=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.totalPay);
+        textViewBillPerPerson=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.billPerPerson);
+        textViewTipPerPerson=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.tipPerPerson);
+        textViewTotalPerPerson=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.totalPerPerson);
 
-        Button btnIncTip=(Button) view.findViewById(R.id.tipIncrease);
-        Button btnDecTip=(Button) view.findViewById(R.id.tipDecrease);
-        Button btnIncPeople=(Button) view.findViewById(R.id.numPeopleIncrease);
-        Button btnDecPeople=(Button) view.findViewById(R.id.numPeopleDecrease);
+        Button btnIncTip=(Button) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.tipIncrease);
+        Button btnDecTip=(Button) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.tipDecrease);
+        Button btnIncPeople=(Button) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.numPeopleIncrease);
+        Button btnDecPeople=(Button) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.numPeopleDecrease);
 
         btnIncTip.setOnClickListener(new View.OnClickListener() {
             @Override

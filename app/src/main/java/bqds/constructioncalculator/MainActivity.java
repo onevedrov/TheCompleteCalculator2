@@ -1,4 +1,4 @@
-package abanoubmagdi.home.thecompletecalculator;
+package bqds.constructioncalculator;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity
         conf.setLocale(new Locale(language_code.toLowerCase()));
         res.updateConfiguration(conf, dm);
 
-        setContentView(R.layout.activity_main);
+        setContentView(abanoubmagdi.home.thecompletecalculator.R.layout.activity_main);
 
         new Thread(new Runnable() {
             @Override
@@ -49,11 +49,11 @@ public class MainActivity extends AppCompatActivity
             }
         }).start();
 
-        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        PreferenceManager.setDefaultValues(this, abanoubmagdi.home.thecompletecalculator.R.xml.preferences, false);
 
         if (savedInstanceState==null) {
             SharedPreferences prefs = getPreferences(MODE_PRIVATE);
-            int id = prefs.getInt("lastFragment", R.id.nav_calculator);
+            int id = prefs.getInt("lastFragment", abanoubmagdi.home.thecompletecalculator.R.id.nav_calculator);
             setFragment(id);
         }
 
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(abanoubmagdi.home.thecompletecalculator.R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(abanoubmagdi.home.thecompletecalculator.R.menu.main, menu);
         return true;
     }
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == abanoubmagdi.home.thecompletecalculator.R.id.action_settings) {
             Intent intent=new Intent(this, SettingsActivity.class);
             startActivity(intent);
             return true;
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity
 
         setFragment(id);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(abanoubmagdi.home.thecompletecalculator.R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -116,16 +116,16 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void activityConfig(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(abanoubmagdi.home.thecompletecalculator.R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(abanoubmagdi.home.thecompletecalculator.R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, abanoubmagdi.home.thecompletecalculator.R.string.navigation_drawer_open, abanoubmagdi.home.thecompletecalculator.R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(abanoubmagdi.home.thecompletecalculator.R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         try {
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
 
         switch (id) {
-            case R.id.nav_calculator:
+            case abanoubmagdi.home.thecompletecalculator.R.id.nav_calculator:
                 fragment = new Calculator();
                 View view = getCurrentFocus();
                 if (view != null) {
@@ -154,20 +154,20 @@ public class MainActivity extends AppCompatActivity
                     catch (Exception ex){}
                 }
                 break;
-            case R.id.nav_unit_converter:
+            case abanoubmagdi.home.thecompletecalculator.R.id.nav_unit_converter:
                 fragment = new UnitConverter();
                 break;
-            case R.id.nav_tip_calculator:
+            case abanoubmagdi.home.thecompletecalculator.R.id.nav_tip_calculator:
                 fragment = new TipCalculator();
                 break;
-            case R.id.nav_loan_calculator:
+            case abanoubmagdi.home.thecompletecalculator.R.id.nav_loan_calculator:
                 fragment = new LoanCalculator();
                 break;
         }
 
         if (fragment != null) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.frame_layout, fragment);
+            fragmentTransaction.replace(abanoubmagdi.home.thecompletecalculator.R.id.frame_layout, fragment);
             fragmentTransaction.commit();
         }
     }

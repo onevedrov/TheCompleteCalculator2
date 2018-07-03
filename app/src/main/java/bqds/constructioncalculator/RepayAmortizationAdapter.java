@@ -1,4 +1,4 @@
-package abanoubmagdi.home.thecompletecalculator;
+package bqds.constructioncalculator;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -19,7 +19,7 @@ class RepayAmortizationAdapter extends ArrayAdapter {
 
     RepayAmortizationAdapter(Context context, ArrayList<RepayAmortization> amortizationArrayList)
     {
-        super(context,R.layout.repay_amortization_item, amortizationArrayList);
+        super(context, abanoubmagdi.home.thecompletecalculator.R.layout.repay_amortization_item, amortizationArrayList);
         this.context=context;
         this.amortizationArrayList=amortizationArrayList;
     }
@@ -28,12 +28,12 @@ class RepayAmortizationAdapter extends ArrayAdapter {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view=inflater.inflate(R.layout.repay_amortization_item,null);
-        TextView textViewNO=(TextView) view.findViewById(R.id.textViewRepayAmortizationNO);
-        TextView textViewPayments=(TextView) view.findViewById(R.id.textViewRepayAmortizationPayments);
-        TextView textViewPrincipal=(TextView) view.findViewById(R.id.textViewRepayAmortizationPrincipal);
-        TextView textViewInterest=(TextView) view.findViewById(R.id.textViewRepayAmortizationInterest);
-        TextView textViewBalance=(TextView) view.findViewById(R.id.textViewRepayAmortizationBalance);
+        View view=inflater.inflate(abanoubmagdi.home.thecompletecalculator.R.layout.repay_amortization_item,null);
+        TextView textViewNO=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.textViewRepayAmortizationNO);
+        TextView textViewPayments=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.textViewRepayAmortizationPayments);
+        TextView textViewPrincipal=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.textViewRepayAmortizationPrincipal);
+        TextView textViewInterest=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.textViewRepayAmortizationInterest);
+        TextView textViewBalance=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.textViewRepayAmortizationBalance);
 
         textViewNO.setText(amortizationArrayList.get(position).no);
         textViewBalance.setText(amortizationArrayList.get(position).balance);

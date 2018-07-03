@@ -1,4 +1,4 @@
-package abanoubmagdi.home.thecompletecalculator;
+package bqds.constructioncalculator;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -30,7 +30,7 @@ public class WeightConverter extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.fragment_weight_converter,null);
+        view=inflater.inflate(abanoubmagdi.home.thecompletecalculator.R.layout.fragment_weight_converter,null);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -41,19 +41,19 @@ public class WeightConverter extends Fragment {
     }
 
     private void setListeners(){
-        textGram=(TextView) view.findViewById(R.id.gram);
-        textMilligram=(TextView) view.findViewById(R.id.milligram);
-        textKilogram=(TextView) view.findViewById(R.id.kilogram);
-        textTon=(TextView) view.findViewById(R.id.ton);
-        textTonUK=(TextView) view.findViewById(R.id.ton_uk);
-        textTonUS=(TextView) view.findViewById(R.id.ton_us);
-        textStoneUK=(TextView) view.findViewById(R.id.stone_uk);
-        textGrain=(TextView) view.findViewById(R.id.grain);
-        textOunce=(TextView) view.findViewById(R.id.ounce);
-        textPound=(TextView) view.findViewById(R.id.pound);
+        textGram=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.gram);
+        textMilligram=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.milligram);
+        textKilogram=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.kilogram);
+        textTon=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.ton);
+        textTonUK=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.ton_uk);
+        textTonUS=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.ton_us);
+        textStoneUK=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.stone_uk);
+        textGrain=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.grain);
+        textOunce=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.ounce);
+        textPound=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.pound);
 
-        editTextWeight=(EditText) view.findViewById(R.id.weightEditText);
-        weightSpinner=(Spinner) view.findViewById(R.id.weightSpinner);
+        editTextWeight=(EditText) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.weightEditText);
+        weightSpinner=(Spinner) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.weightSpinner);
 
         editTextWeight.addTextChangedListener(new TextWatcher() {
             @Override

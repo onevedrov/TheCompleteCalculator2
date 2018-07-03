@@ -1,4 +1,4 @@
-package abanoubmagdi.home.thecompletecalculator;
+package bqds.constructioncalculator;
 
 import android.os.Bundle;
 import android.support.v7.preference.ListPreference;
@@ -11,7 +11,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.preferences, rootKey);
+        setPreferencesFromResource(abanoubmagdi.home.thecompletecalculator.R.xml.preferences, rootKey);
 
         ListPreference listPreference=(ListPreference) findPreference("language");
         listPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {

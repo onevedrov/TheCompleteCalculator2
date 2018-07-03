@@ -1,4 +1,4 @@
-package abanoubmagdi.home.thecompletecalculator;
+package bqds.constructioncalculator;
 
 
 import android.os.Bundle;
@@ -31,7 +31,7 @@ public class DistanceConverter extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view=inflater.inflate(R.layout.fragment_distance_converter, container, false);
+        view=inflater.inflate(abanoubmagdi.home.thecompletecalculator.R.layout.fragment_distance_converter, container, false);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -42,20 +42,20 @@ public class DistanceConverter extends Fragment {
     }
 
     private void setListeners(){
-        textMilli=(TextView) view.findViewById(R.id.millimeter);
-        textCenti=(TextView) view.findViewById(R.id.centimeter);
-        textDeci=(TextView) view.findViewById(R.id.decimeter);
-        textMeter=(TextView) view.findViewById(R.id.meter);
-        textHecto=(TextView) view.findViewById(R.id.hectometer);
-        textKilo=(TextView) view.findViewById(R.id.kilometer);
-        textInch=(TextView) view.findViewById(R.id.inch);
-        textFoot=(TextView) view.findViewById(R.id.foot);
-        textYard=(TextView) view.findViewById(R.id.yard);
-        textMile=(TextView) view.findViewById(R.id.mile);
-        textNauticalMile=(TextView) view.findViewById(R.id.nautical_mile);
+        textMilli=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.millimeter);
+        textCenti=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.centimeter);
+        textDeci=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.decimeter);
+        textMeter=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.meter);
+        textHecto=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.hectometer);
+        textKilo=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.kilometer);
+        textInch=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.inch);
+        textFoot=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.foot);
+        textYard=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.yard);
+        textMile=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.mile);
+        textNauticalMile=(TextView) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.nautical_mile);
 
-        editTextDistance=(EditText) view.findViewById(R.id.distanceEditText);
-        distanceSpinner=(Spinner) view.findViewById(R.id.distanceSpinner);
+        editTextDistance=(EditText) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.distanceEditText);
+        distanceSpinner=(Spinner) view.findViewById(abanoubmagdi.home.thecompletecalculator.R.id.distanceSpinner);
         editTextDistance.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
